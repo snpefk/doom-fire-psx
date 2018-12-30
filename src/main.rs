@@ -7,7 +7,7 @@ use image::Pixel;
 use piston_window::*;
 
 fn main() {
-    let (width, height): (usize, usize) = (300, 300);
+    let (width, height): (usize, usize) = (320, 168);
 
     let mut window: PistonWindow =
         WindowSettings::new("Doom Fire PSX", (width as u32, height as u32))
@@ -60,7 +60,7 @@ fn main() {
         [0xFF, 0xFF, 0xFF, 0xFF],
     ];
 
-    let mut fbuffer: [usize; 90_000] = [0; 90_000];
+    let mut fbuffer: [usize; 53_760] = [0; 53_760];
 
     for x in 0..width {
         fbuffer[(height - 1) * width + x] = 36
