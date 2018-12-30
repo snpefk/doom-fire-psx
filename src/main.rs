@@ -69,7 +69,7 @@ fn main() {
     while let Some(event) = window.next() {
         for x in 0..width {
             for y in 1..height {
-                let index = y * height + x;
+                let index = y * width + x;
 
                 if fbuffer[index] == 0 { 
                     fbuffer[index - width] = 0;
