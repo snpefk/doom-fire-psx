@@ -77,7 +77,7 @@ fn main() {
                     let color: isize = (fbuffer[index] - (rand_idx & 1)) as isize;
                     fbuffer[index] = (color % 36) as usize;
                     let dst: usize = index - rand_idx + 1;
-                    fbuffer[dst] = fbuffer[index];
+                    fbuffer[dst - width] = fbuffer[index];
                 }
             }
         }
