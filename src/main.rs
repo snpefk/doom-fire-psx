@@ -2,7 +2,6 @@ extern crate image;
 extern crate piston_window;
  
 use rand::Rng; 
-use image::Pixel;
 use piston_window::*;
 
 fn main() {
