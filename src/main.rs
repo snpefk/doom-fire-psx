@@ -1,4 +1,3 @@
-// TODO: replace `unwrap()` with `?`
 extern crate image;
 extern crate piston_window;
  
