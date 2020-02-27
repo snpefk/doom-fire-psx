@@ -53,7 +53,7 @@ fn main() {
             .exit_on_esc(true)
             .opengl(OpenGL::V3_2)
             .build()
-            .unwrap();
+            .expect("Failed to create window");
 
     let mut canvas = image::ImageBuffer::new(width as u32, height as u32);
     let mut texture: G2dTexture =
