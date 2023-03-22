@@ -3,6 +3,7 @@ extern crate piston_window;
  
 use rand::Rng; 
 use piston_window::*;
+use std::{thread, time};
 
 
 const COLORS: [[u8; 4]; 37] = [
@@ -46,7 +47,7 @@ const COLORS: [[u8; 4]; 37] = [
 ];
 
 fn main() {
-    let (width, height): (usize, usize) = (320, 168);
+    let (width, height): (usize, usize) = (300, 168);
 
     let mut window: PistonWindow =
         WindowSettings::new("Doom Fire PSX", (width as u32, height as u32))
@@ -64,8 +65,11 @@ fn main() {
     for x in 0..width {
         fbuffer[(height - 1) * width + x] = 36
     }
-
+    
+    let delay = time::Duration::from_millis(30);
+    
     while let Some(event) = window.next() {
+        thread::sleep(delay);
         for x in 0..width {
             for y in 1..height {
                 let index = y * width + x;
